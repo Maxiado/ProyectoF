@@ -15,11 +15,4 @@ public class ObstacleBehaviour : MonoBehaviour
             transform.position = startPosition.position;
         }
     }
-
-    // private void OnTriggerEnter2D(Collider2D other)
-    // {
-    //     if (other.gameObject.layer.Equals(4))
-    //     {
-    //     }
-    // }
 }
