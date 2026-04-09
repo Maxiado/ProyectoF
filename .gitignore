@@ -1,0 +1,49 @@
+# Esta regla ignora la carpeta .idea de Rider sin importar en qué subcarpeta esté
+**/.idea/
+
+# [Unity] Carpetas generadas automáticamente
+/[Ll]ibrary/
+/[Tt]emp/
+/[Oo]bj/
+/[Bb]uild/
+/[Bb]uilds/
+/[Ll]ogs/
+/[Uu]ser[Ss]ettings/
+
+# [Unity] Capturas de memoria
+/[Mm]emoryCaptures/
+
+# [Unity] Archivos de Asset Server
+.metadata
+.tmp
+.log
+
+# [Unity] Archivos de Mac
+.DS_Store
+*~
+*.swp
+
+# [Archivos de compilación y proyectos de C#]
+*.csproj
+*.unityproj
+*.sln
+*.suo
+*.user
+*.userprefs
+*.pidb
+*.booproj
+*.svd
+*.pdb
+*.mdb
+*.opendb
+*.VC.db
+
+# [Archivos de Crash de Unity]
+sysinfo.txt
+*.apk
+*.aab
+*.unitypackage
+*.app
+
+# [Crashlytics]
+crashlytics-build.properties
