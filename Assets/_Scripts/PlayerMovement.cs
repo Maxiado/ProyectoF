@@ -11,6 +11,9 @@ public class PlayerMovement : MonoBehaviour
     public int balasIzquierda = 10;
     public int balasDerecha = 10;
 
+    public int balasMaxIzquierda = 10; //este es el limite para que al recargar no se pase y me cargue mas de 10 balas
+    public int balasMaxDerecha = 10;
+
     private Rigidbody2D rb;
     private bool inputIzquierda;
     private bool inputDerecha;
@@ -58,5 +61,20 @@ public class PlayerMovement : MonoBehaviour
         return balasDerecha > 0;
     }
 
-    
+    void Disparar(Vector2 direccion)
+    {
+        // Aplica fuerza en sentido contrario
+        rb.AddForce(-direccion * fuerzaRetroceso, ForceMode2D.Impulse);
+
+        // Acá podés agregar efectos, sonido, etc.
+        Debug.Log("Disparo hacia: " + direccion);
+    }
+
+    public void RecargarCompleto()
+    {
+        balasIzquierda = balasMaxIzquierda;
+        balasDerecha = balasMaxDerecha;
+
+        Debug.Log("Munición recargada completamente");
+    }
 }
