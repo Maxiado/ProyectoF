@@ -42,7 +42,7 @@ public class PlayerMovement : MonoBehaviour
             balasDerecha--;
         }
     }
-
+//CONFLICTO 
     void FixedUpdate()
     {
         if (Mathf.Abs(rb.linearVelocity.x) > velocidadMaximaX)// aca tuve que simplificar la funcion porque estaba de mas el if inputizquierda / ...derecha. Lucas
