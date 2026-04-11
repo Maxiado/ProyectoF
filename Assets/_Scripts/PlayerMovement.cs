@@ -58,12 +58,5 @@ public class PlayerMovement : MonoBehaviour
         return balasDerecha > 0;
     }
 
-    void Disparar(Vector2 direccion)
-    {
-        // Aplica fuerza en sentido contrario
-        rb.AddForce(-direccion * fuerzaRetroceso, ForceMode2D.Impulse);
-
-        // Acá podés agregar efectos, sonido, etc.
-        Debug.Log("Disparo hacia: " + direccion);
-    }
+    
 }
