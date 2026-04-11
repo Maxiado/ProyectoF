@@ -52,7 +52,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   leftAmmoTxt: {fileID: 196884983090006129}
   rigthAmmoTxt: {fileID: 8664893172947564201}
-  playerMovement: {fileID: 0}
 --- !u!1 &8757301397050872249
 GameObject:
   m_ObjectHideFlags: 0
@@ -156,6 +155,7 @@ MonoBehaviour:
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
@@ -292,6 +292,7 @@ MonoBehaviour:
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
