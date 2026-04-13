@@ -42,7 +42,7 @@ public class PlayerMovement : MonoBehaviour
             balasDerecha--;
         }
     }
-//CONFLICTO 
+
     void FixedUpdate()
     {
         if (Mathf.Abs(rb.linearVelocity.x) > velocidadMaximaX)// aca tuve que simplificar la funcion porque estaba de mas el if inputizquierda / ...derecha. Lucas
@@ -65,16 +65,11 @@ public class PlayerMovement : MonoBehaviour
     {
         // Aplica fuerza en sentido contrario
         rb.AddForce(-direccion * fuerzaRetroceso, ForceMode2D.Impulse);
-
-        // Acá podés agregar efectos, sonido, etc.
-        Debug.Log("Disparo hacia: " + direccion);
     }
 
     public void RecargarCompleto()
     {
         balasIzquierda = balasMaxIzquierda;
         balasDerecha = balasMaxDerecha;
-
-        Debug.Log("Munición recargada completamente");
     }
 }
