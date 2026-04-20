@@ -15,4 +15,15 @@ public class ObstacleBehaviour : MonoBehaviour
             transform.position = startPosition.position;
         }
     }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.TryGetComponent<DamageHandler>(out DamageHandler dps))
+        {
+            // Pasamos los datos al crear la clase, y ya no se pueden alterar en el camino
+            DamageInfo info = new DamageInfo(10f, "Fisico");
+            dps.ProcesarDanio(info);
+        }
+    }
 }
+
