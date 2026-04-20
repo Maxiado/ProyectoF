@@ -1,16 +1,15 @@
 using UnityEngine;
 
-public class DamageInfo : MonoBehaviour
+public class DamageInfo
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
+    // Usamos { get; } sin "set" para que sean de solo lectura después de creadas
+    public float Cantidad { get; }
+    public string TipoDeDanio { get; }
 
-    // Update is called once per frame
-    void Update()
+    // Constructor: La única forma de darle valores es al momento de crear el objeto
+    public DamageInfo(float cantidad, string tipo)
     {
-        
+        this.Cantidad = cantidad;
+        this.TipoDeDanio = tipo;
     }
 }
