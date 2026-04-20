@@ -1,40 +1,27 @@
-using UnityEngine;
 
+using UnityEngine;
 public class PlayerHealth : MonoBehaviour
 {
-    [Header("Configuración de Vida")]
-    public float vidaMaxima = 5f;
+    [SerializeField] private float vidaMaxima = 100f;
     private float vidaActual;
 
-    [Header("Estado")]
-    public bool esInvulnerable = false;
+    // Para que otros scripts puedan LEER la vida pero no MODIFICARLA, 
+    // usamos una Propiedad de solo lectura:
+    public float VidaActual => vidaActual; 
 
     void Start()
     {
-        // Al empezar, el jugador tiene la vida al máximo
         vidaActual = vidaMaxima;
     }
 
-    // Esta función la llamarás desde los obstáculos o enemigos
-    public void RecibirDaño(float cantidad)
+    // La única "puerta" de entrada para cambiar la vida es este método
+    public void RecibirDanio(float cantidad)
     {
-        if (esInvulnerable) return;
-
+        if (cantidad < 0) return; // Seguridad: no permitimos daño negativo
+        
         vidaActual -= cantidad;
-
-        // Limitamos la vida para que no sea menor a 0
         vidaActual = Mathf.Clamp(vidaActual, 0, vidaMaxima);
-
-        if (vidaActual <= 0)
-        {
-            Morir();
-        }
-    }
-
-    private void Morir()
-    {
-        // Aquí puedes desactivar el movimiento, mostrar un menú de Game Over
-        // o recargar la escena.
-        gameObject.SetActive(false); 
+        
+        if (vidaActual <= 0) Morir();
     }
 }
